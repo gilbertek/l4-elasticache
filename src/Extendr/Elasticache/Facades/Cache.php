@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Facade;
 /**
 * ExtendedCache
 */
-class ElastiCache extends Facade
+class Cache extends Facade
 {
 	/**
      * Get the registered name of the component.
