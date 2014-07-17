@@ -1,5 +1,7 @@
 <?php namespace Extendr\Elasticache;
 
+use Memcache;
+
 /**
 * ElasticacheStore
 */
@@ -27,7 +29,7 @@ class ElasticacheStore extends \Illuminate\Cache\TaggableStore implements \Illum
 	 * @param  string     $prefix
 	 * @return void
 	 */
-	public function __construct(memcache $memcache, $prefix = '')
+	public function __construct(Memcache $memcache, $prefix = '')
 	{
 		$this->memcache = $memcache;
 		$this->prefix = strlen($prefix) > 0 ? $prefix.':' : '';
