@@ -20,12 +20,12 @@ class ElasticacheServiceProvider extends ServiceProvider {
 	{
 		$this->app['elasticache'] = $this->app->share(function($app)
 		{
-			return new ElastiCacheManager($app);
+			return new ElasticacheManager($app);
 		});
 
 		$this->app['elasticache.connector'] = $this->app->share(function()
 		{
-			return new ElastiCacheConnector;
+			return new ElasticacheConnector;
 		});
 	}
 
