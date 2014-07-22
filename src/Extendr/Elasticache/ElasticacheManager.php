@@ -17,7 +17,7 @@ class ElasticacheManager extends CacheManager {
      */
     protected function createMemcacheDriver()
 	{
-		$servers = $this->app['config']['cache.memcached'];
+		$servers = $this->app['config']['cache.memcache'];
 
 		$memcache = $this->app['elasticache.connector']->connect($servers);
 
